@@ -1,55 +1,51 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT:
+Version change: N/A → 1.0.0
+Added sections: All principles and sections for Physical AI & Humanoid Robotics Textbook
+Removed sections: Template placeholders
+Templates requiring updates: N/A (new constitution)
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Scientific Accuracy
+Every factual claim must be traceable to a verifiable source. Prefer primary research from robotics, embodied cognition, biomechanics, and AI/ML. All content must be grounded in verifiable, state-of-the-art research with no hallucinated references under any circumstances.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Academic Clarity
+Write for an audience with an undergraduate-level background in computer science, robotics, or AI. Define advanced terminology before use. Content must be instructional, analytical, and research-driven with Flesch–Kincaid Grade 10–12 writing level.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Reproducibility & Transparency
+All methods, algorithms, mathematical formulations, and conceptual frameworks must be presented with enough detail to be reproducible. Each chapter must clearly state assumptions, models, and dependencies. Include symbolic definitions for all variables in mathematical formulations.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Rigor & Peer-Review Standards
+Minimum 50% peer-reviewed sources from robotics/AI conferences and journals. Prioritize sources such as: IEEE, Nature Robotics, Science Robotics, ACM, arXiv (with caution), RSS, ICRA, IROS. No claim should appear unless verified by at least one reputable source.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Ethical & Safety Awareness
+Consider ethical implications, safety constraints, societal impact, and human-robot interaction standards. No unverified claims about capabilities or dangers. Content must address ethical considerations and safety constraints in Physical AI and Humanoid Robotics.
 
-### [PRINCIPLE_6_NAME]
+### Content Verification & Plagiarism Standards
+Plagiarism tolerance: 0% (all text must be original). Use APA 7th edition citation format. Source types: ≥ 50% peer-reviewed academic sources; Remaining sources may include technical standards, robotics lab documentation, textbooks, reputable industry whitepapers, and specifications from leading robotics groups.
 
+## Structural Requirements
 
-[PRINCIPLE__DESCRIPTION]
+### Book Format & Deployment
+Book Format: Docusaurus-based. Deployment: GitHub Pages. Minimum Length: 20–30 full chapters. Each chapter must meet specific requirements: Learning objectives, Key definitions, Examples & illustrations, Summary, Citations section, Glossary entries where needed.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Visual & Accessibility Standards
+Non-copyright diagrams preferred. Provide descriptions of all figures for accessibility. All visuals must be original or properly licensed for educational use.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Workflow
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Chapter Creation Process
+Each chapter must be generated through a spec-first workflow: outline → draft → verify → revise. Use Spec-Kit Plus commands: /sp.chapter, /sp.glossary, /sp.diagram.description, /sp.proto, /sp.checklist for all content creation.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Content Constraints
+Total Word Count: 30,000–50000 words. Minimum Sources: 40+. Mathematical Accuracy: Use canonical equations from robotics, control theory, machine learning, and embodied intelligence. All factual claims must be source-verified.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+The constitution governs all content generation, review, editing, and verification across the full book creation process. All chapters and content must comply with these principles before acceptance. Any deviation from these principles requires explicit amendment to the constitution following the project governance process.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07

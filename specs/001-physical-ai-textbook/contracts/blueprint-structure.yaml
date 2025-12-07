@@ -1,0 +1,152 @@
+# Textbook Blueprint Contract
+
+## Purpose
+This contract defines the interface and structure requirements for the Physical AI & Humanoid Robotics textbook blueprint.
+
+## Document Structure Contract
+
+### Module Document Interface
+```yaml
+type: object
+properties:
+  id:
+    type: string
+    description: Unique identifier for the module
+    pattern: "^[a-z0-9-]+$"
+  title:
+    type: string
+    description: Display title of the module
+  description:
+    type: string
+    description: Brief overview of module focus
+  learning_outcomes:
+    type: array
+    items:
+      type: string
+    minItems: 3
+    maxItems: 5
+    description: Measurable learning outcomes for the module
+  software_stack:
+    type: array
+    items:
+      type: string
+    minItems: 1
+    description: Recommended software tools and versions
+  hardware_recommendations:
+    type: array
+    items:
+      type: string
+    minItems: 1
+    description: Primary hardware components
+  hardware_alternatives:
+    type: array
+    items:
+      type: string
+    minItems: 1
+    description: Budget-conscious hardware alternatives
+  prerequisites:
+    type: array
+    items:
+      type: string
+    description: Specific knowledge requirements for the module
+  assessment_recommendations:
+    type: array
+    items:
+      type: string
+    description: Optional assessment methods (optional per FR-014)
+  dependencies:
+    type: array
+    items:
+      type: string
+    description: Modules that should be completed first
+  personalization:
+    type: boolean
+    default: true
+    description: Whether personalization features are supported
+  translation:
+    type: string
+    description: Supported translation language codes
+required:
+  - id
+  - title
+  - description
+  - learning_outcomes
+  - software_stack
+  - hardware_recommendations
+  - hardware_alternatives
+  - prerequisites
+additionalProperties: false
+```
+
+### Chapter Document Interface
+```yaml
+type: object
+properties:
+  id:
+    type: string
+    description: Unique identifier for the chapter within its module
+    pattern: "^[a-z0-9-]+$"
+  title:
+    type: string
+    description: Display title of the chapter
+  description:
+    type: string
+    description: Brief overview of chapter content
+  subtopics:
+    type: array
+    items:
+      type: string
+    minItems: 2
+    maxItems: 5
+    description: Specific subtopics as H2/H3 headings
+  estimated_duration:
+    type: string
+    description: Time estimate for completion (e.g., "1 week", "2-3 hours")
+  personalization:
+    type: boolean
+    default: true
+    description: Whether personalization features are supported
+  translation:
+    type: string
+    description: Supported translation language codes
+required:
+  - id
+  - title
+  - description
+  - subtopics
+  - estimated_duration
+additionalProperties: false
+```
+
+## Navigation Contract
+
+### Directory Structure Requirements
+The blueprint MUST adhere to the following directory structure:
+```
+docs/
+├── 01-ros2-nervous-system/
+├── 02-digital-twin/
+├── 03-ai-robot-brain/
+├── 04-vla/
+└── _category_.json
+```
+
+### File Naming Convention
+- Module directories: `NN-module-name` (where NN is 01-04)
+- Chapter files: `NN-chapter-name.md` (where NN is sequential within module)
+- Module intro: `intro.md` in each module directory
+
+## Validation Requirements
+1. Each module MUST have 3-6 chapters
+2. Each chapter MUST have 2-5 subtopics
+3. All documents MUST include required frontmatter fields
+4. Learning outcomes MUST be measurable and specific
+5. Hardware recommendations MUST include alternatives as per FR-017
+6. Prerequisites MUST be specified for each module as per FR-015
+
+## Extensibility Hooks
+The structure MUST support future additions:
+- Personalization features via frontmatter
+- Translation support via frontmatter
+- Assessment integration via frontmatter
+- User context awareness via metadata

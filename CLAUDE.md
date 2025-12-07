@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Markdown (h2/h3 headings, bullet lists only) + Docusaurus v3.9, Node.js 18+ (001-physical-ai-textbook)
+- File-based (Markdown files in docs/ directory) (001-physical-ai-textbook)
+
+## Recent Changes
+- 001-physical-ai-textbook: Added Markdown (h2/h3 headings, bullet lists only) + Docusaurus v3.9, Node.js 18+
