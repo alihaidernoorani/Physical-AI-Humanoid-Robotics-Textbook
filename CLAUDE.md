@@ -212,6 +212,7 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 ## Active Technologies
 - Markdown (h2/h3 headings, bullet lists only) + Docusaurus v3.9, Node.js 18+ (001-physical-ai-textbook)
 - File-based (Markdown files in docs/ directory) (001-physical-ai-textbook)
+- Markdown format with Docusaurus v3.9.2, Node.js 20+ + Docusaurus, GitHub Pages, official ROS/NVIDIA documentation (001-textbook-full-content-generation)
 
 ## Recent Changes
 - 001-physical-ai-textbook: Added Markdown (h2/h3 headings, bullet lists only) + Docusaurus v3.9, Node.js 18+
