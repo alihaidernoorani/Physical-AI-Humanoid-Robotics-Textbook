@@ -1,0 +1,20 @@
+import React from 'react';
+import UrduTranslator from './translation/UrduTranslator';
+import PersonalizeButton from './auth/PersonalizeButton';
+import { AuthProvider } from './auth/AuthContext';
+
+const ChapterControls = () => {
+  return (
+    <div style={{
+      display: 'flex',
+      gap: '1rem',
+      marginBottom: '1.5rem',
+      flexWrap: 'wrap'
+    }}>
+      <PersonalizeButton />
+      <UrduTranslator content={typeof window !== 'undefined' ? document.title : ''} />
+    </div>
+  );
+};
+
+export default ChapterControls;
